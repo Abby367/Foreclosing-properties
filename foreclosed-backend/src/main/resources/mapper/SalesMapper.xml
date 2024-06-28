@@ -1,0 +1,8 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.foreclosed.home.dao.SalesDao">
+    <select id="getAllSales" resultType="com.foreclosed.home.model.SalesModel">
+        SELECT home_sale_id, sale_type, sale_details 
+        FROM home_sale 
+        WHERE del_flag = 0 
+    </select>
+</mapper>
