@@ -5,7 +5,7 @@ const homesalebox = () => {
     
 
     return (
-        <Box sx={{backgroundColor:'#E5E5E5'}}>
+        <Box >
 
         </Box>
     );
