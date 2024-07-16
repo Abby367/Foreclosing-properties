@@ -5,15 +5,15 @@ import { Search } from "@mui/icons-material";
 
 export default function Landingsearch() {
   return (
-    <Box sx={{ marginTop: 4, display: 'flex', flexDirection: 'row', flexWrap: 'wrap', columnGap: '20px' }}>
+    <Box sx={{ marginTop: 4, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
       <Box sx={{ width: { xs: '100%', md: '40vw' }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ width: { xs: '100%', md: '80%' } }}>
           <Typography
-            fontSize={"32px"}
+            fontSize={"48px"}
             fontWeight="bold"
             component="h1"
             sx={{
-              width: { xs: '100%', md: '380px' }
+              width: { xs: '100%', md: '580px' }
             }}
           >
             The better way to buy <Typography component="span" sx={{ color: '#007FFF' }}>real estate</Typography>
@@ -43,7 +43,8 @@ export default function Landingsearch() {
       </Box>
       <Box
         sx={{
-          display: { xs: 'none', md: 'block' }
+          width: '30%',
+          display: { xs: 'none', md: 'block' } // Hide on extra small screens and show on medium and larger screens
         }}
       >
         <Landingcarousel />
