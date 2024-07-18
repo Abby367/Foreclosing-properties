@@ -83,16 +83,17 @@ export default function TopNav() {
   );
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 1, bgcolor: 'white', width:{xs:'90%',md:'100%'}}}>
-      <img width={150} src={Logo} alt="Logo" /> 
+    <Box sx={{bgcolor: 'white',width:{xs:'100%',md:'100%', display:'flex', justifyContent:'center'}}}>
+    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 1,  width:{xs:'95%',md:'95%'} }}>
+      <img width={120} src={Logo} alt="Logo" /> 
     
       <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-        <Stack direction="row" spacing={4} marginRight={"20px"}>
+        <Stack direction="row" spacing={4}>
           {menuItems}
         </Stack>
       </Box>
 
-      <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+      <Box sx={{ display: { xs: 'block', md: 'none' }}}>
         <IconButton onClick={handleDrawerToggle} sx={{  color: '#007FFF' }}>
           <MenuIcon />
         </IconButton>
@@ -183,6 +184,7 @@ export default function TopNav() {
           </ListItem>
         </List>
       </Drawer>
+    </Box>
     </Box>
   );
 }

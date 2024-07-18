@@ -5,15 +5,23 @@ import { Search } from "@mui/icons-material";
 
 export default function Landingsearch() {
   return (
-    <Box sx={{ marginTop: 4, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-      <Box sx={{ width: { xs: '100%', md: '40vw' }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Box sx={{ marginTop: 4, display: 'flex', flexDirection: 'row', gap:'130px',flexWrap: 'wrap' ,width:{xs:'100vw', md:'100vw', justifyContent:'center'}}}>
+      <Box 
+        sx={{ 
+          width: { xs: '100vw', md: '40vw' }, 
+          display: 'flex', 
+          flexDirection: 'column',
+          alignItems: { xs: 'center', md: 'center' }, // Align center on small screens
+          textAlign: {  xs: 'center', md: 'left' } // Center text on small screens
+        }}
+      >
         <Box sx={{ width: { xs: '100%', md: '80%' } }}>
           <Typography
-            fontSize={"48px"}
             fontWeight="bold"
             component="h1"
             sx={{
-              width: { xs: '100%', md: '580px' }
+              width: { xs: '90%' }, 
+              fontSize: { xs: '32px', md: '48px' }
             }}
           >
             The better way to buy <Typography component="span" sx={{ color: '#007FFF' }}>real estate</Typography>
@@ -24,7 +32,7 @@ export default function Landingsearch() {
             Smart Investing Starts with Pag-IBIG: Your Path to Affordable Homeownership
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', mt: 4, width: { xs: '100%', md: '80%' } }}>
+        <Box sx={{ display: 'flex', mt: 4, width: { xs: '100%', md: '80%' }, justifyContent: { xs: 'center', md: 'flex-start' } }}>
           <Input
             placeholder="Search"
             startDecorator={<Search sx={{ color: '#0B6BCB' }} />}
@@ -43,8 +51,8 @@ export default function Landingsearch() {
       </Box>
       <Box
         sx={{
-          width: '30%',
-          display: { xs: 'none', md: 'block' } // Hide on extra small screens and show on medium and larger screens
+          width: '45%',
+          display: { xs: 'none', md: 'flex' }, 
         }}
       >
         <Landingcarousel />
