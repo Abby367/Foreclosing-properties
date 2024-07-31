@@ -1,36 +1,35 @@
 import React from "react";
 import Landingcarousel from "../carousel/Landingcarousel";
-import { Box, Typography, Input } from "@mui/joy";
+import { Box, Typography, Input, Stack } from "@mui/joy";
 import { Search } from "@mui/icons-material";
+import { display } from "@mui/system";
 
 export default function Landingsearch() {
   return (
-    <Box
-      sx={{
-        marginTop: 4,
-        display: "flex",
-        flexDirection: "row",
-        gap: "130px",
-        flexWrap: "wrap",
-        width: { xs: "100vw", md: "100vw", justifyContent: "center" },
-      }}
+    <Stack
+      direction={"row"}
+      spacing={1}
+      justifyContent={"space-around"}
+      marginTop={5}
     >
       <Box
         sx={{
-          width: { xs: "100vw", md: "40vw" },
           display: "flex",
           flexDirection: "column",
-          alignItems: { xs: "center", md: "center" }, // Align center on small screens
-          textAlign: { xs: "center", md: "left" }, // Center text on small screens
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Box sx={{ width: { xs: "100%", md: "80%" } }}>
+        <Box
+          sx={{
+            width: { xs: "100%", md: "380px", lg: "535px" },
+          }}
+        >
           <Typography
-            fontWeight="bold"
-            component="h1"
             sx={{
-              width: { xs: "90%" },
-              fontSize: { xs: "32px", md: "48px" },
+              textAlign: { xs: "center" },
+              fontWeight: "bold",
+              fontSize: { xs: "32px", md: "32px", lg: "64px" },
             }}
           >
             The better way to buy{" "}
@@ -39,23 +38,19 @@ export default function Landingsearch() {
             </Typography>
           </Typography>
         </Box>
-        <Box sx={{ width: { xs: "100%", md: "80%" } }}>
-          <Typography
-            level="body-sm"
-            fontWeight="500"
-            component="p"
-            sx={{ mt: 2, width: { md: "380px" } }}
-          >
+        <Box sx={{ mt: 2, width: { md: "380px", textAlign: "center" } }}>
+          <Typography level="body-sm" fontWeight="500" component="p">
             Smart Investing Starts with Pag-IBIG: Your Path to Affordable
             Homeownership
           </Typography>
         </Box>
         <Box
           sx={{
+            width: "380px",
+            height: "100px",
             display: "flex",
-            mt: 4,
-            width: { xs: "100%", md: "80%" },
-            justifyContent: { xs: "center", md: "flex-start" },
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Input
@@ -63,7 +58,7 @@ export default function Landingsearch() {
             startDecorator={<Search sx={{ color: "#0B6BCB" }} />}
             sx={{
               width: "100%",
-              maxWidth: "300px",
+              maxWidth: "350px",
               height: "45px",
               borderRadius: "5px",
               borderColor: "#0B6BCB",
@@ -74,14 +69,9 @@ export default function Landingsearch() {
           />
         </Box>
       </Box>
-      <Box
-        sx={{
-          width: "45%",
-          display: { xs: "none", md: "flex" },
-        }}
-      >
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>
         <Landingcarousel />
       </Box>
-    </Box>
+    </Stack>
   );
 }

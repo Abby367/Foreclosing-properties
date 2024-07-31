@@ -26,8 +26,6 @@ export default function Landingcarousel() {
   return (
     <Box
       sx={{
-        width: { xs: "100%", md: "47.5vw" },
-        height: "400px",
         mt: { xs: 4, md: 0 },
         display: "flex",
         flexDirection: "column",
