@@ -26,10 +26,13 @@ export default function Landingcarousel() {
   return (
     <Box
       sx={{
+        width: "535px",
+        height: "350px",
+
         mt: { xs: 4, md: 0 },
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         alignItems: "center",
         position: "relative",
         overflow: "hidden",
@@ -63,6 +66,7 @@ export default function Landingcarousel() {
             sx={{
               width: "100%",
               maxHeight: "100%",
+              borderRadius: "10px",
               objectFit: "contain", // Adjust to 'cover' if you want to cover the entire space
             }}
           />

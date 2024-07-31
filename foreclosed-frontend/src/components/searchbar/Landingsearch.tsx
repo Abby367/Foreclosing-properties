@@ -6,18 +6,14 @@ import { display } from "@mui/system";
 
 export default function Landingsearch() {
   return (
-    <Stack
-      direction={"row"}
-      spacing={1}
-      justifyContent={"space-around"}
-      marginTop={5}
-    >
+    <Stack direction={"row"} justifyContent={"space-around"}>
       <Box
         sx={{
+          mt: "15px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           alignItems: "center",
+          width: "610px",
         }}
       >
         <Box
@@ -38,7 +34,13 @@ export default function Landingsearch() {
             </Typography>
           </Typography>
         </Box>
-        <Box sx={{ mt: 2, width: { md: "380px", textAlign: "center" } }}>
+        <Box
+          sx={{
+            mt: 2,
+            textAlign: "center",
+            width: { sx: "100%", md: "380px" },
+          }}
+        >
           <Typography level="body-sm" fontWeight="500" component="p">
             Smart Investing Starts with Pag-IBIG: Your Path to Affordable
             Homeownership
@@ -46,7 +48,7 @@ export default function Landingsearch() {
         </Box>
         <Box
           sx={{
-            width: "380px",
+            width: { sx: "100%", md: "380px" },
             height: "100px",
             display: "flex",
             justifyContent: "center",
@@ -69,7 +71,14 @@ export default function Landingsearch() {
           />
         </Box>
       </Box>
-      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <Box
+        sx={{
+          width: "650px",
+          display: { xs: "none", md: "flex" },
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}
+      >
         <Landingcarousel />
       </Box>
     </Stack>

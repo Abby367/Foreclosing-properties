@@ -94,8 +94,6 @@ export default function Landingcards() {
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
-        gap: "1em", // Add gap between cards
-        marginTop: "1em", // Optional: add some margin at the top
       }}
     >
       {renderCards()}

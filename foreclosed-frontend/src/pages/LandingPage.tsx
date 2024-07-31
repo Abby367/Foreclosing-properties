@@ -13,11 +13,13 @@ const LandingPage = () => {
           "&::-webkit-scrollbar-thumb": {
             display: "none",
           },
+          overflow: "hidden",
           height: {
-            xs: "100%",
+            xs: "100vh",
             md: "100%",
             lg: "100vh",
           },
+          width: { xs: "100%", md: "100%", lg: "100%" },
         }}
       >
         <TopNav />
