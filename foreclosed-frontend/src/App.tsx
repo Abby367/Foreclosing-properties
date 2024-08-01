@@ -1,26 +1,18 @@
 import React from "react";
-import "./App.css";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Navigate,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import { Stack } from "@mui/joy";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <Stack>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<LandingPage />} />
-          <Route path="/" element={<LandingPage />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </BrowserRouter>
-    </Stack>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

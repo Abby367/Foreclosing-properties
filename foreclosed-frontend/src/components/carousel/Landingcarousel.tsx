@@ -44,6 +44,7 @@ export default function Landingcarousel() {
           overflow: "hidden",
           transition: "transform 0.3s, box-shadow 0.3s",
           "&:hover": {
+            borderRadius: "20px",
             transform: "scale(1.05)",
             boxShadow: "0 8px 16px rgba(0,0,0,0.3)",
           },
@@ -66,7 +67,7 @@ export default function Landingcarousel() {
             sx={{
               width: "100%",
               maxHeight: "100%",
-              borderRadius: "10px",
+              borderRadius: "20px",
               objectFit: "contain", // Adjust to 'cover' if you want to cover the entire space
             }}
           />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import {
   Box,
@@ -78,6 +79,8 @@ export default function TopNav() {
       </Link>
       <Button
         variant="solid"
+        component={RouterLink}
+        to="/login"
         sx={{
           bgcolor: "#007FFF",
           width: "120px",
@@ -95,12 +98,9 @@ export default function TopNav() {
     <Box
       sx={{
         bgcolor: "white",
-        width: {
-          xs: "100%",
-          md: "100%",
-          display: "flex",
-          justifyContent: "center",
-        },
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Box
@@ -109,7 +109,7 @@ export default function TopNav() {
           justifyContent: "space-between",
           alignItems: "center",
           p: 1,
-          width: { xs: "95%", md: "95%" },
+          width: "95%",
         }}
       >
         <img width={120} src={Logo} alt="Logo" />
@@ -198,6 +198,8 @@ export default function TopNav() {
             <ListItem>
               <Button
                 variant="solid"
+                component={RouterLink}
+                to="/login"
                 sx={{
                   bgcolor: "#007FFF",
                   width: "100%",
