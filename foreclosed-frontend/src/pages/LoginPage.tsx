@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/joy";
 import CircleIcon from "@mui/icons-material/Circle";
 import Loginbox from "../components/Box/Loginbox";
+import Signupbox from "../components/Box/Signupbox"; // Import the Signupbox component
 
 const LoginPage = () => {
+  const [isSignUp, setIsSignUp] = useState(false); // State to toggle between login and signup
+
   return (
     <Box
       sx={{
-        width: "100vw",
-        height: "100vh",
+        backgroundColor: "#F5F6F8",
+        overflowY: "scroll !important",
+        scrollbarWidth: "none",
+        "&::-webkit-scrollbar-thumb": {
+          display: "none",
+        },
+        overflow: "hidden",
+        height: {
+          xs: "100vh",
+          md: "100%",
+          lg: "98.2vh",
+        },
+        width: { xs: "100%", md: "100%", lg: "100%" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        overflow: "hidden",
-        position: "relative", // Adjusted position to relative
+        position: "relative",
       }}
     >
       <Box
@@ -56,13 +69,17 @@ const LoginPage = () => {
       </Box>
       <Box
         sx={{
-          zIndex: 1, // Ensure Loginbox is above the icons
+          zIndex: 1,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <Loginbox />
+        {isSignUp ? (
+          <Signupbox setIsSignUp={setIsSignUp} /> // Show Signupbox if isSignUp is true
+        ) : (
+          <Loginbox setIsSignUp={setIsSignUp} /> // Show Loginbox if isSignUp is false
+        )}
       </Box>
     </Box>
   );

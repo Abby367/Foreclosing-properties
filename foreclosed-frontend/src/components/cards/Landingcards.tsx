@@ -61,6 +61,7 @@ export default function Landingcards() {
             sx={{
               height: "300px",
               position: "relative",
+
               background:
                 "linear-gradient(360deg, #0c419a 25%, rgba(12, 64, 154, 0.555) 100%)",
               boxShadow: "0 5px 30px 10px rgba(0, 0, 0, 0.3)",
@@ -73,12 +74,18 @@ export default function Landingcards() {
                 alignContent: "start",
               }}
             >
-              <div>
-                <Typography sx={{ color: "white", textAlign: "center" }}>
-                  {sale.sale_type}
-                </Typography>
-                <Typography>{sale.sale_details}</Typography>
-              </div>
+              <Box>
+                <Box>
+                  <Typography sx={{ color: "white", textAlign: "center" }}>
+                    {sale.sale_type}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: "flex" }}>
+                  <Typography sx={{ color: "white", marginTop: "20px" }}>
+                    {sale.sale_details}
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Box>
