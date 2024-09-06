@@ -1,5 +1,6 @@
 import React, { useState, Dispatch, SetStateAction } from "react";
 import { Box, Input, Button, Typography, Link } from "@mui/joy";
+import Logo from "../../assets/Logo.png";
 interface AuthBoxProps {
   setIsSignUp: Dispatch<SetStateAction<boolean>>;
 }
@@ -14,7 +15,7 @@ export default function Signupbox({ setIsSignUp }: AuthBoxProps) {
         backgroundColor: "#ffffff",
         display: "flex",
         width: 1500,
-        height: 450,
+        height: 700,
         p: 4,
         bgcolor: "white",
         borderRadius: 2,
@@ -35,11 +36,14 @@ export default function Signupbox({ setIsSignUp }: AuthBoxProps) {
           justifyContent: "space-around",
         }}
       >
+        <Box sx={{ display: "flex" }}>
+          <img width={200} src={Logo} alt="Logo" />
+        </Box>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Typography
-            sx={{ fontSize: "18px", color: "#007FFF", fontWeight: "700" }}
+            sx={{ fontSize: "12px", color: "#007FFF", fontWeight: "700" }}
           >
-            Create your account
+            Create an Account Below, It’s really easy!
           </Typography>
         </Box>
         <Box
