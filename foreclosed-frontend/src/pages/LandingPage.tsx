@@ -2,6 +2,7 @@ import TopNav from "../components/navigationbar/topnav";
 import Landingsearch from "../components/searchbar/Landingsearch";
 import Landingcard from "../components/cards/Landingcards";
 import { Stack, Box } from "@mui/joy";
+import Findbox from "../components/Box/Findbox";
 const LandingPage = () => {
   return (
     <Stack>
@@ -21,6 +22,7 @@ const LandingPage = () => {
         <TopNav />
         <Landingsearch />
         <Landingcard />
+        <Findbox/>
       </Box>
     </Stack>
   );
